@@ -24,3 +24,4 @@ const Circle2 = new Circle(10);
 
 console.log(Circle1.getDiameter()); //10
 console.log(Circle2.getDiameter()); //20
+
