@@ -1,0 +1,47 @@
+<script>
+	/* 1번 문제 
+	function sumAll(arr) {
+		let sum = 0;
+		for(let i = 0; i < arr.length;i++){
+			sum += arr[i];
+		}
+		return sum;
+	}
+
+	let result = sumAll([1,2,3]);
+	alert(result);
+	*/
+
+
+/*	2번 문제 
+	function getDiscountPrice(product) {
+		let prices = 0;
+		prices = product.price - (product.price * product.rate);
+		return prices;
+	}
+	let product = {name:'라면',price:1000,rate:0.2};
+	let discountPrice = getDiscountPrice(product); // 800
+
+	alert(discountPrice);
+*/
+
+/*	문제 3번 
+	let p1 = { x: 0,y: 3};
+	function move(p1,dx,dy) {
+		return {
+			x : p1.x + dx,
+			y : p1.y + dy
+	}
+}
+	let p2 = move(p1,2,3);
+	console.log(p2); //{x:2, y:6}
+*/
+
+function nameSplit(name) {
+	let arr = name.split(" ");
+	return {first : arr[0], last : arr[1]};
+}
+let name = "John Smith";
+let s = nameSplit(name);
+console.log(s); //{first: "John", last: "Smith"};
+</script>
