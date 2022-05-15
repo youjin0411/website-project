@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project01</title>
+    <style>
+        body {
+            width: 960px;
+            margin: 0 auto;
+        }
+        .aside{
+            width: 200px;
+            float: left;
+        }
+        #section {
+            width: 760px;
+            float: left;
+        }
+        #section2 {
+            width: 760px;
+            float: left;
+        }
+        #wrap { overflow: hidden;}
+
+        table {
+            width: 100%;
+            border: 1px solid #444444;
+            border-collapse: collapse;
+         } 
+
+        #content > .aside {
+            width: 200px;
+            float: left;
+        }
+       #content > #main_aside{
+           width: 650px;
+           float: right;
+           background-color: #FFD2D7;
+       } 
+       #content {
+           width: 860px; margin: 0 auto;
+
+           overflow: hidden;
+       }
+
+    </style>
+</head>
+<body>
+    <hr/>
+    <center><h1>🌐2021-2022 활동🌐</h1></center>
+    <hr/>
+
+    <div id="content">
+    <section class = "aside">
+        <h1>김유진</h1>
+        <hr>
+        <img src = "이미지.jpg"  style=" display:block;" width="100">
+        <b>학력</b>
+        <table border="1">
+            <tr>
+                <th>중학교</th>
+                <th>고등학교</th>
+            </tr>
+            <tr>
+                <td>장림여자중학교</td>
+                <td>미림여자정보과학고등학교</td>
+            </tr>
+        </table>
+        <hr>
+        <a href="https://github.com/youjin0411">깃허브링크</a><br>
+        <a href="https://velog.io/@youjin0411">velog 링크</a>
+    </section>
+
+    <aside id="main_aside">
+    <h1>2021 - 2022 공모전 현황</h1>
+    <li id="section">2021공모전
+        <ul>
+            <li>2021 대한민국 학생창의력 챔피언 대회(서울 금상/전체 : 장려상)</li>
+            <li>2021 YIP 청소년 발명가프로그램 (장려상) </li>
+            <li>2021 STAC 참가 (서비스명 : 와그작)</li>
+            <li>새싹 창의 영재 창업 프로그램 참가</li>
+            <li>2021 크라우드 펀딩 참가</li>
+            <li>별빛 신사리 상권 회복 프로젝트(우수상)</li>
+            <li>데모데이 기후 대응 공모전 참가 (그린나래 서비스)</li>
+        </ul>
+    </li>
+    <li id="section2">2022공모전
+        <ul>
+            <li>2022 YIP 청소년 발명가프로그램</li>
+            <li>2022 STAC</li>
+        </ul>
+    </li>
+</aside>
+</div>
+
+</body>
+</html>
