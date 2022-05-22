@@ -13,3 +13,4 @@ console.log(count); //3
 //참고로 String.prototype.match 메서드를 사용해도 같은 동작을 한다.
 const regxp = new RegExp(seach, 'g');
 console.log(string.match(regxp).length); //3
+
