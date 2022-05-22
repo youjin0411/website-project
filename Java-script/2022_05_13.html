@@ -35,7 +35,7 @@
 }
 	let p2 = move(p1,2,3);
 	console.log(p2); //{x:2, y:6}
-*/
+
 
 function nameSplit(name) {
 	let arr = name.split(" ");
@@ -44,4 +44,86 @@ function nameSplit(name) {
 let name = "John Smith";
 let s = nameSplit(name);
 console.log(s); //{first: "John", last: "Smith"};
+*/
+/*
+평균값을 반환하는 average함수
+	function average(arr) {
+		let sum = 0;
+		for(let i = 0; i < arr.length;i++){
+			sum += arr[i];
+		}
+		return sum / 3;
+	}
+
+	let result = average([100,50,25]);
+	alert(result);
+*/
+
+/*
+function addMartrix(m1,m2){
+	let result = [];
+	for(let i = 0; i < m1.length; i++){
+		let row = [];
+		for(let j = 0; j < m1[i].length; j++){
+			row.push(m1[i][j] + m2[i][j]);
+		}
+		result.push(row);
+	}
+	return result;
+}
+const m = addMartrix([[1,2],[3,4]],[[3,4],[5,6]])
+console.log(m);
+*/
+
+/*
+function swapKeyValue(obj){
+	let o = {};
+	for (const key in obj) {
+		const value = obj[key];
+		o[value] = key;
+	}
+	return o;
+}
+
+const o = {a: "B", c: "D"};
+const o2 = swapKeyValue(o);
+console.log(o2);
+*/
+
+/*
+function chunk(number,len){
+	let result = [];
+	for(let i = 0; i < number.length; i += len){
+		result.push(number.slice(i, i+len));
+	}
+	return result;
+}
+
+const r1 = chunk([1,2,3,4,5],2);
+console.log(r1);
+const r2 = chunk([1,2,3,4,5],3);
+console.log(r2);
+*/
+
+function Range(start,end){
+	this.start = start;
+	this.end = end;
+	this.in = function(o){
+		if(start <= o && end >= o ){
+			return true;
+		}else{
+			return false;
+		}
+	}
+}
+let r = new Range(1,10);
+console.log(r.start);
+console.log(r.end);
+let b1 = r.in(5);
+console.log(b1);
+let b2 = r.in(11);
+console.log(b2);
+let b3 = r.in(0);
+console.log(b3);
+</script>
 </script>
