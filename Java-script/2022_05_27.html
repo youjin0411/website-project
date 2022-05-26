@@ -122,5 +122,65 @@ let user5 = {
 let key = prompt('사용자의 어떤 정보를 얻고 싶으신가요?',"name");
 alert(user5[key]);
 
+//값 단축 구문 사용
+let name = "John";
+let age = 20;
+
+//값 단축 구문없이 객체 정의
+let user6 = {
+    name : name,
+    age : age
+}
+alert(user6);
+
+//변수와 속성 이름이 같을 경우 다음과 같이 축약하여 객체 정의 가능
+user7 = {
+    //name : name과 같은 의미
+    name,
+    //age : age와 같은 의미
+    age
+}
+alert(user7);
+
+function makeUser(name,age){
+    return {name : age};
+}
+let usermake = makeUser("김유진", 18);
+alert(usermake);
+
+//프로퍼티 이름의 제약사항
+//예약어를 키로 사용해도 무방
+let Obj = {
+    for : 1,
+    let : 2,
+    return : 3
+};
+alert(Obj.for+Obj.let+Obj.return);
+
+let obj2 = {
+    0 : "test"
+};
+alert(obj2[0]);
+alert(obj2["0"])
+
+//in 연산자를 사용한 속성 존재 여부 확인 
+let user8 = {};
+
+alert(user8.noSuchProperty == undefined);
+
+let user9 ={
+    name : "John"
+};
+//name 속성이 존재하므로 true출력
+alert("name" in user9);
+// alert("noSuchOroperty" in user); false
+
+let user10 = {
+    name : "김유진"
+};
+alert("name" in user10); //ture
+alert(user.name === undefined); //name속성은 존재하지만 undefiend이므로 true출력
+
+
 
 </script>
