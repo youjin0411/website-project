@@ -181,6 +181,15 @@ let user10 = {
 alert("name" in user10); //ture
 alert(user.name === undefined); //name속성은 존재하지만 undefiend이므로 true출력
 
-
+//for... in 반복문
+// 모든 키를 순회할 수 있다. 
+let user11 = {
+    name : "youjin",
+    age : 18,
+    isAdmin : true
+};
+for(let key in user11){
+    alert(key + ":" + user11[key]);
+}
 
 </script>
