@@ -1,0 +1,73 @@
+<script>
+    //함수 선언문
+    function sayHi(){
+        alert("Hello");
+    }
+    sayHi();
+    let sayHi2 = function(){
+        alert("Hello2");
+    }
+    sayHi2();
+
+    function ask(question,yes,no){
+        if(confirm(question)){
+            yes();
+        }else{
+            no();
+        }
+    }
+    function showOk(){
+        alert('동의하셨습니다.');
+    }
+    function showCancle(){
+        alert('취소 버튼을 누르셨습니다.');
+    }
+    //사용법
+    ask("동의하십니까?",showOk,showCancle);
+
+    //함수 선언문
+    function sum(a,b){
+        return a + b;
+    }
+    let result = sum(3,2);
+    alert(result);
+    
+    //함수 표현식
+    let sum2 = function(a,b){
+        return a + b;
+    }
+    let result2 = sum2(7,8);
+    alert(result2);
+    
+    sayHi3("John");
+    function sayHi3(name){
+        alert(`Hello, ${naem}`);
+    }
+
+    let sayHi4 = function(name){
+        alert(`Hello, ${name}`);
+    }
+    sayHi4("youjin");
+
+    //화살표 함수
+    let sum3 = (a,b) => a + b;
+    let double = n => n * 2;
+    let sayHi5 = () => alert("Hello");
+
+    let age = prompt("나이를 알려주세요", 18);
+    let welcome = (age < 18) ?
+        () => alert("안녕"):
+        () => alert("안녕하세요");
+
+
+//중괄호는 본문 여러 줄로 구성되어 있음을 알려줌
+let sum4 = (a, b) => {
+    let result = a + b;
+    
+    //중괄호를 사용했다면, return 문을 이용하여 결괏값을 반환해야 함 
+    return result; 
+}
+let res = sum4(1,2);
+alert(res);
+
+</script>
