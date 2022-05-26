@@ -1,0 +1,46 @@
+<script>
+    function showMessage(){
+        alert('안녕하세요');
+    }
+    showMessage();
+
+    function showMessage2(){
+        let message = '안녕하세요'; //지역변수
+
+        //함스 내에서만 message 접근 가능
+        alert(message);
+    }
+    showMessage2();
+
+let userName = "John";
+
+function showMessage3(){
+    userName = "Bob";
+    let message = "Hello," + userName;
+    alert(message);
+}
+showMessage3();
+
+//두 개의 파리미터 존재(from,text)
+function showMessage4(form,text){
+    alert(form+':'+text);
+}
+showMessage4('Ann','Hello!');
+
+function showMessage5(text){
+    if(text == undefined){
+        text = '빈 문자열';
+    }
+    alert(text);
+}
+let text2 = prompt('문자를 입력하시오');
+showMessage(text2);
+
+//반환값이 있는 함수 return 
+function sum(a,b){
+    return a + b;
+}
+let result = sum(1, 2);
+alert(result);
+
+</script>
