@@ -36,6 +36,37 @@ console.log(i);
 
 //무한 루프
 for(;;){
-    
+
 }
 
+//switch 문
+let a =  2+2;
+switch(a){
+    case 3:
+        console.log('비교하려는 값보다 작습니다.');
+        break;
+    case 4:
+        console.log('비교하려는 값과 일치합니다.');
+        break;
+    case 5:
+        console.log('비교하려는 값보다 큽니다. ')
+        break;
+    default:
+        console.log('어떤 값인지 파악이 되지 않습니다. ')
+}
+
+//여러 개의 case문 묶기
+let c = 3;
+switch(c){
+    case 4:
+        console.log('계산이 맞습니다 ! ');
+        break;
+    case 3:
+    case 5:
+        console.log('계산이 틀립니다.');
+        console.log('수학 수업을 다시 들어보는걸 권유 드립니다 ');
+        break;
+    default:
+        console.log("계산 결과가 이상하네요.");
+    
+}
