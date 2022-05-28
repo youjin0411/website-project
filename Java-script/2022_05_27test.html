@@ -1,0 +1,125 @@
+<script>
+    //1번 문제. 배열에 들어있는 값의 합 
+    // function sumAll(a){
+    //     let result = 0;
+    //     for(let i = 0; i < a.length;i++){
+    //         result += a[i];
+    //     }
+    //     return result;
+    // }
+
+    // let result = sumAll([1,2,3]);
+    // alert(result);
+
+    //2번 문제. 객체에 들어있는 값 중을 이용하여 라면 할인 후 가격 
+    // function getDiscountPrice(product){
+    //     let prices = 0;
+    //     prices = product.price - (product.price * product.rate);
+    //     return prices;
+    // }
+    // let product = {
+    //     name : '라면',
+    //     price : 1000,
+    //     rate : 0.2
+    // };
+    // let discountPrice = getDiscountPrice(product);
+    // alert(discountPrice);
+
+    //3. 좌표의 이동 후 좌표를 구하시오.
+//     let p1 = {x : 0, y : 3};
+//     function move(p1,dx,dy){
+//         return {
+//             x : p1.x + dx,
+//             y : p1.y + dy
+//         }
+//     }
+//     let p2 = move(p1,2,3,);
+//     console.log(p2);
+
+    //4. 문자열을 잘라서 출력하시오.
+    // function nameSplit(name){
+    //     let arr = name.split(" ");
+    //     return {first: arr[0], last: arr[1]};
+    // }
+    // let name = "John Smith";
+    // let s = nameSplit(name);
+    // console.log(s);
+
+    //4. 평균값을 반환하는 average함수
+    // function average(arr){
+    //     let sum = 0; 
+    //     for(let i = 0; i < arr.length; i++){
+    //         sum += arr[i];
+
+    //     }
+    //     return sum / 3;
+    // }
+    // let result = average([100,50,30]);
+    // alert(result);
+
+    //5. 2차원 배열의 같은 행 끼리 더한 값을 구하시오
+    //ex. [[1,2],[3,4]],[[3,4],[5,6]]
+    // => [4,6],[8,10]
+    // function addMartrix(m1, m2){
+    //     let result = [];
+    //     for(let i = 0; i < m1.length; i++){
+    //         let row = [];
+    //         for(let j = 0; j < m1[i].length; j++){
+    //             row.push(m1[i][j]+m2[i][j]);
+    //         }
+    //         result.push(row);
+    //     }
+    //     return result;
+    // }
+    // const m = addMartrix([[1,2],[3,4]],[[3,4],[5,6]]);
+    // console.log(m);
+
+    //6. 객체의 키와 값의 위치를 변경
+    // function swapKeyValue(obj){
+    //     let o = {};
+    //     for(const key in obj){ //for..in 조회
+    //         const value = obj[key];
+    //         o[value] = key;
+    //     }
+    //     return o;
+    // }
+    // const o = {a : "B", c : "D"};
+    // const o2 = swapKeyValue(o);
+    // console.log(o2);
+    
+    //7. 문자열의 길이만큼 배열을 자르는 프로그램 
+//     function chunk(number,len){
+// 	let result = [];
+// 	for(let i = 0; i < number.length; i += len){
+// 		result.push(number.slice(i, i+len));
+// 	}
+// 	return result;
+// }
+
+// const r1 = chunk([1,2,3,4,5],2);
+// console.log(r1);
+// const r2 = chunk([1,2,3,4,5],3);
+// console.log(r2);
+
+//8. 범위 안에 있으면 true 없으면 false 
+// function Range(start,end){
+// 	this.start = start;
+// 	this.end = end;
+// 	this.in = function(o){
+// 		if(start <= o && end >= o ){
+// 			return true;
+// 		}else{
+// 			return false;
+// 		}
+// 	}
+// }
+// let r = new Range(1,10);
+// console.log(r.start);
+// console.log(r.end);
+// let b1 = r.in(5);
+// console.log(b1);
+// let b2 = r.in(11);
+// console.log(b2);
+// let b3 = r.in(0);
+// console.log(b3);
+ </script>

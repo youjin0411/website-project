@@ -1,0 +1,51 @@
+*{
+    margin: 0; padding: 0;
+    font-family: 'Noto Sans KR Light',serif;
+}
+li{
+    list-style:none ;
+}
+a{
+    text-decoration: none;
+}
+
+ html{
+    height: 100%;
+    overflow: hidden;
+    width:650px;
+    height:75px;
+    background: url('images/Rectangle\ 1\ \(2\).png');
+    background-size: cover;
+}
+
+body{
+    position:absolute;
+    top: 50%; left: 50%;
+    margin-left: -480px;
+    margin-top: -275px;
+    width: 960px; height: 550px;
+    background: url('images/c.jpg');
+}
+
+#container { height: 500px; }
+#main_navigation > ul { overflow: hidden; }
+#main_navigation > ul > li { float: left; }
+#main_navigation > ul > li >  a {
+    display: block;
+    width: 240px; height: 50px;
+    line-height: 50px;
+    /*text-indent: -9999px;*/
+    background: url('Images/mqdefault.jpg');
+    
+}
+
+#main_navigation > ul > li:nth-child(1) > a { background-position: 0px 0px;}
+#main_navigation > ul > li:nth-child(2) > a { background-position: 0px -100px;}
+#main_navigation > ul > li:nth-child(3) > a { background-position: 0px -200px;}
+#main_navigation > ul > li:nth-child(4) > a { background-position: 0px -300px;}
+
+#main_navigation > ul > li:nth-child(1) > a:hover { background-position: 0px -50px;}
+#main_navigation > ul > li:nth-child(2) > a:hover { background-position: 0px -150px;}
+#main_navigation > ul > li:nth-child(3) > a:hover { background-position: 0px -250px;}
+#main_navigation > ul > li:nth-child(4) > a:hover { background-position: 0px -350px;}
+
