@@ -8,6 +8,9 @@ li{
 a{
     text-decoration: none;
 }
+p {
+    color:bisque
+}
 
  html{
     height: 100%;
@@ -27,7 +30,38 @@ body{
     background: url('images/c.jpg');
 }
 
-#container { height: 500px; }
+#container { 
+    position: relative;
+
+    width: 100%;
+    padding: 0 40px;
+    margin-left: -40px;
+
+    height: 500px;
+    overflow: hidden; 
+}
+div[data-name]{
+    position: absolute;
+    left: 40px; top: 500px;
+
+    width: 960px; height: 500px;
+
+    transition-duration: 2s;
+}
+div[data-name].active { top:  0;}
+div[data-name = main] > img {
+    position: absolute;
+    left: 10px; bottom: 0;
+}
+div[data-name = information] > div {
+    position: absolute;
+    left: 450px; top: 30px;
+
+    width: 480px;
+}
+div[data-name=multimedia] {
+    padding: 10px;
+}
 #main_navigation > ul { overflow: hidden; }
 #main_navigation > ul > li { float: left; }
 #main_navigation > ul > li >  a {
