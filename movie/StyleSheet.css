@@ -49,15 +49,19 @@ div[data-name]{
     transition-duration: 2s;
 }
 div[data-name].active { top:  0;}
-div[data-name = main] > img {
+div[data-name=main] > img {
     position: absolute;
-    left: 10px; bottom: 0;
+    left: 100px; bottom: 0;
 }
-div[data-name = information] > div {
+div[data-name=information] > div {
     position: absolute;
     left: 450px; top: 30px;
 
     width: 480px;
+}
+div[data-name=information] > img{
+    position: absolute;
+    left: 20px; top: 20px;
 }
 div[data-name=multimedia] {
     padding: 10px;
@@ -107,3 +111,21 @@ div[data-name=multimedia] {
 #title > h1:nth-child(1) { background-position: 0px -48px;}
 #title > h1:nth-child(1) { background-position: 0px -96px;}
 
+div[data-name=character] > a {
+    display: block;
+    width: 40px; height: 40px;
+    text-indent: -9999px;
+    background: url(Images/df.png);
+}
+div[data-name=character] > a:nth-child(1){
+    background-position: 0px 0px;
+    position: absolute;
+    left: 10px; top: 50%;
+    margin-top: -20px;
+}
+div[data-name=character] > a:nth-child(2){
+    background-position: 0px -40px;
+    position: absolute;
+    left: 10px; top: 50%;
+    margin-top: -20px;
+}
