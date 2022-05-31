@@ -1,0 +1,11 @@
+<script>
+    let arr1 = [1,4];
+    let arr2 = [2,3];
+    arr1.splice(1,0,arr2);
+    console.log(arr1);
+
+    let arr3 = [1,4];
+    let arr4 = [2,3];
+    Array.prototype.splice.apply(arr3,[1,0].concat(arr2));
+    
+</script>
