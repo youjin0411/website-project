@@ -63,6 +63,60 @@ b {
   background-color: #ffffff;
 }
  
+.carousel1-item .top_line{
+  width: 96%;
+  height: 1.5px;
+  position: relative;
+  top:-30px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 0;
+  background-color: black;
+}
+
+.carousel-item .top_line_down{
+  width: 96%;
+  height: 1.5px;
+  position: relative;
+  top: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 0;
+  background-color: black;
+}
+
+.carousel-item .top_line{
+  width: 96%;
+  height: 1.5px;
+  position: relative;
+  top: -30px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 0;
+  background-color: black;
+}
+
+.carousel1-item .top_line_down{
+  width: 96%;
+  height: 1.5px;
+  position: relative;
+  top: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 0;
+  background-color: black;
+}
+
+.carousel1-item .top_line_mute{
+  width: 96%;
+  height: 1.5px;
+  position: relative;
+  top: 8px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 0;
+  background-color: black;
+}
 
 /* body carousel페이지 */
 .sumlight_page {
