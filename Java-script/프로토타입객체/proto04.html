@@ -14,4 +14,9 @@
     // 하지만 obj 객체의 생성자는 함수는 Object 생성자 함수다.
     console.log(obj.constructor === Object); //true
 
+    //foo함수는 Function 생성자 함수로 객체가 아니라 함수 선언문으로 생성했다.
+    function foo(){}
+
+    // 하지만 constructor 프로퍼티를 통해 확인해보면 함수 foo 생성자 함수는 Function 생성자 함수이다.
+    console.log(foo.constructor === Function); //ture
 </script>
