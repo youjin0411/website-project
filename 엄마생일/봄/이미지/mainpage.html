@@ -1,0 +1,911 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/0e4eb96f7d.js" crossorigin="anonymous"></script>
+     <!-- Boxicons -->
+     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <title> 💖울엄마💖 </title>
+    </style>
+    <style>
+      /* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap');
+
+/* Variables CSS */
+:root {
+    /* color */
+    --text_color: #fff;
+    --main_color: hsl(41, 88%, 55%);
+    --main_color_bright: rgb(255, 165, 205);
+
+    /* font */
+    --body_font: 'Noto Sans KR', sans-serif;
+    --big_font_size: 1.5rem; /* 36px */
+    --normal_font_size: 1.1875rem;
+    --nav_font_size: 0.9375rem;
+    --small_font_size: 0.875rem;
+
+    /* font weight */
+    --font_bold: 700;
+
+    /* z-index */
+    --z-index: 100;
+}
+
+/* BASE */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    position: relative;
+    /* overflow-x: hidden;
+    overflow-y: auto; */
+    font-family: var(var(--body_font));
+    font-size: var(--normal_font_size);
+    color: var(--text_color);
+}
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: var(--text_color);
+}
+img {
+    max-width: 100%; /* 이미지보다 창 크기가 작아져도 이미지를 완전히 유지하며 축소 */
+    height: auto; /* 기본값*/
+}
+
+/* nav */
+nav .container {
+    margin-left: 1rem; /* = 16px */
+    margin-right: 1rem;
+}
+
+/* header {
+    background-color: var(--main_color_bright);
+} */
+
+nav {
+    display: flex;
+    flex-direction: column;
+    height: 100px;
+    background-color: var(--main_color_bright);
+}
+
+.nav_toggle {
+    display: none;
+}
+
+.nav_toggle i {
+    color: var(--main_color);
+    font-size: 1.875rem;
+}
+
+.logo{
+  padding: 35px;
+  text-align: center;
+  color: #fff;
+  font-size: 20px;
+  display: none;
+}
+
+nav .top_line{
+  display: flex;
+  flex-basis: 100%;
+  align-items: center;
+  margin-top: -35px;
+  color: #fff;
+  font-size: 20px;
+}
+
+nav .top_line::before{
+  content: "";
+  flex-grow: 1;
+  margin: 0px 16px;
+  background: #fff;
+  height: 1.34px;
+}
+
+nav .top_line::after{
+  content: "";
+  flex-grow: 1;
+  margin: 0px 16px;
+  background: #fff;
+  height: 1.34px;
+}
+
+.nav_menu {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: -35px;
+}
+
+.nav_list {
+    display: flex;
+}
+
+.nav_link {
+  display: block;
+    font-size: var(--nav_font_size);
+    color: #fff;
+}
+
+.nav_item {
+    padding: 1vw 8vw;
+}
+
+.nav_item:hover{
+  background-color: var(--main_color); 
+  -webkit-transition:all .2s linear;
+  -o-transition:all .2s linear;
+  transition:all .2s linear
+}
+
+nav .bottom_line{
+  position: absolute;
+  content: "";
+  width: 100%;
+  margin: 90px 16px;
+  background: #fff;
+  height: 1px;
+  border: 0;
+}
+
+/* mobile */
+@media screen and (max-width: 600px) {
+  nav {
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 0;
+  }
+
+  .nav_toggle {
+    position: absolute;
+    display: block;
+    cursor: pointer; /* 마우스 커서 모양 변경 */
+    left: 10px;
+    top: 35px;
+  }
+
+  .logo{
+    display: block;
+    margin: 0 auto;
+  }
+
+  nav .top_line{
+    display: none;
+  }
+ 
+  .nav_list {
+    display: none;
+  }
+
+  .nav_list.active {
+    z-index: var(--z-index);
+    position: absolute;
+    display: block;
+    flex-direction: column;
+    top: 100px; /* nav 높이 */
+    left: 0;
+    right: 0; 
+    background-color: var(--main_color_bright);
+  }
+
+  .nav_item {
+    padding: 1rem 0;
+    border-top: 1px solid #fff;
+    text-align: center; /* 글자 가운데 정렬 */
+    background-color: var(--main_color_bright);
+    z-index: var(--z-index);
+  }
+
+  nav .bottom_line{
+    display: none;
+  }
+
+}
+* {
+  margin: 0; /*빈공간X*/
+  padding: 0; /*빈공간X*/
+  box-sizing: border-box;
+  font-family: "Noto Sans KR";
+}
+
+body {
+  background-color: rgb(255, 165, 205);
+}
+/* body{
+  height: 100%;
+} */
+p{
+  color: #000000;
+  font-size: 1.5vw;
+  /*즉, vw는 현재 실행중인 스크린 크기에 맞춰 vw(width)상대적 크기를 반환하겠다는 뜻입니다.*/
+}
+
+/*슬라이드 제목*/
+b {
+  font-size: 2.8vw;
+}
+
+/*이미지(꽃, 메이크업)*/
+.img { 
+  max-width: 100%;
+  width: 40%;
+  height: 50%;
+} 
+
+/* 팔레트 이미지 */
+.img_p {  
+  max-width: 100%;
+  width: 20%;
+  height: 50%;
+}
+
+/* 코디 + 화장품 이미지 */
+.styleimg { 
+  max-width: 100%;
+  width: 20%;
+  height: 45%; 
+}
+
+/* 라인 선  */
+
+/* 슬라이더 1 반응형 위에 라인 */
+.carousel-item .top_line{
+  width: 96%;
+  height: 1.5px;
+  position: relative;
+  top: -24px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 0;
+  background-color: black;
+}
+/* 슬라이더 1 반응형 아래 라인 */
+.carousel-item .top_line_down{
+  width: 96%;
+  height: 1.5px;
+  position: relative;
+  top: 16px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 0;
+  background-color: black;
+}
+
+/* 슬라이더 2 반응형 위에 라인 */
+.carousel1-item .top_line{
+  width: 96%;
+  height: 1.5px;
+  position: relative;
+  top:-30px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 0;
+  background-color: black;
+}
+/* 슬라이더 2 반응형 아래에 라인 */
+.carousel1-item .top_line_down{
+  width: 96%;
+  height: 1.5px;
+  position: relative;
+  top: 18px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 0;
+  background-color: black;
+}
+
+/* body carousel 반응형 슬라이더1 페이지 */
+.sumlight_page {
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+  position: relative;
+  color: #713D84;
+  box-sizing: border-box;
+  padding: 60px 0px;
+  height: auto;
+  padding-top: 10%;
+  background-color: white;
+}
+
+/* body carousel 반응형 슬라이더2 페이지 */
+.sumlight_page2 {
+  background-color: white;
+  width: 100%;
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  color: #713D84;
+  box-sizing: border-box;
+  padding: 60px 0px;
+  height: auto;
+  padding-top: 10%;
+}
+
+
+/* FOOTER  CSS */
+.footer {
+  width: 100%; /* 넓이를 100%로 채우기 반응형 */
+  background-color: hwb(320 50% 1%);
+  padding: 10px 90px;
+}
+
+.contain {
+  /* margin-left: 1rem;
+  margin-right: 1rem; */
+  display: flex;
+  justify-content: space-between;  
+}
+
+.footer .col {
+  align-items: center;
+  float: left;
+  column-gap: 40px; /*글자사이의 거리 */
+}
+
+.footer .col .social {
+  float: left;
+}
+
+.footer .col h1 {
+  font-size: 12px;
+  line-height: 17px;
+  padding: 20px 0px 5px 0px;
+  color: #292e52;
+  /* footer 소제목 글씨 모양 */
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+}
+
+.footer .col ul {
+  list-style-type: none; /* • 모양 없애기 */
+}
+
+.footer .col ul li {
+  color: #ffffff;
+  font-size: 0.97vw;
+  /*글자사이의 간격*/
+  padding: 6px 0px 6px 0px; 
+  cursor: pointer; /*cursor 마우스 커서 모양 뜨기 */
+  /*마우스 커서 시 색상 변하는 속도 조절 */
+  transition: 0.2s; 
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+}
+
+.social ul li {
+  display: inline-block;
+}
+ 
+i {
+  font-size: 1.1rem;
+}
+/*마우스커서 올릴 시 글자의 색상이 변함 */
+.footer .col ul li:hover {
+  color: #000000;
+  transition: 0.1s;
+  -webkit-transition: 0.1s;
+  -moz-transition: 0.1s;
+}
+
+/*마우스커서 올릴 시 글자의 색상이 변함 */
+.social ul li img :hover {
+  color: #fff;
+  transition: 0.1s;
+  -webkit-transition: 0.1s;
+  -moz-transition: 0.1s;
+}
+
+.clearfix {
+  clear: both;
+}
+
+/* @media only screen and (max-width: 1139px) {
+  .contain .social {
+    width: 100%;
+    display: block;
+    padding: 0.5rem 0;
+  }
+  .social h1 {
+    margin: 0px;
+  }
+}
+@media only screen and (max-width: 930px) {
+  .footer .col {
+    width: 100%;
+  }
+  .footer .col h1 {
+    font-size: 14px;
+  }
+  .footer .col ul li {
+    font-size: 13px;
+  }
+} */
+/* @media screen and (max-width: 600px) {
+  .footer .col {
+    width: 10%;
+  }
+  .footer .col h1 {
+    font-size: 0.375rem;
+  }
+  .footer .col ul li {
+    font-size: 0.3vw;
+  }
+  .col {
+    display:flow-root;
+  }
+} */
+/* @media only screen and (max-width: 340px) {
+  .footer .col {
+    width: 100%;
+  }
+} */
+
+
+/* nav css */
+
+/* carousel */
+.carousel {
+  position: relative;
+  box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.64);
+  margin-top: 26px;
+}
+.carousel, .carousel1 {
+  overflow: hidden; 
+}
+
+/* 1번 슬라이드 박스  */
+.carousel-open:checked + .carousel-item {
+  position: static;
+  opacity: 100;
+}
+
+/* 화면 슬라이드 css */
+.carousel-item {
+  position: absolute;
+  opacity: 0;
+  -webkit-transition: opacity 0.6s ease-out;
+  transition: opacity 0.6s ease-out;
+}
+
+/* 1번 슬라이드 아래 크기  */
+.carousel-control {
+  background: rgba(0, 0, 0, 0.28);
+  border-radius: 50%;
+  color: #fff;
+  cursor: pointer;
+  display: none;
+  font-size: 40px;
+  height: 40px;
+  line-height: 35px;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+  cursor: pointer;
+  -ms-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  text-align: center;
+  width: 40px;
+  z-index: 10;
+}
+
+/* 왼쪽 슬라이드 버튼 위치 */
+.carousel-control.prev {
+  left: 2%;
+}
+
+/* 오른쪽 슬라이드 버튼 위치  */
+.carousel-control.next {
+  right: 2%;
+}
+
+/* 슬라이드 버튼 클릭시 검은색으로 변함 */
+.carousel-control:hover {
+  background: rgba(0, 0, 0, 0.8);
+  color: #aaaaaa;
+}
+
+/* 슬라이드 버튼 눌렸을 시 화면 넘어가게 하기  */
+#carousel-1:checked ~ .control-1,
+#carousel-2:checked ~ .control-2,
+#carousel-3:checked ~ .control-3 {
+  display: block;
+}
+
+/* 아래 점 세개 현재 페이지 표시 점 중앙 정렬 */
+.carousel-indicators {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  bottom: 2%;
+  left: 0;
+  right: 0;
+  text-align: center;
+  z-index: 10;
+}
+
+/* 현재 페이지 점 위치 선 아래로  */
+.carousel-indicators li {
+  display: inline-block;
+  margin: 0 5px;
+}
+
+/* 현재 페이지 점 위치 정렬 */
+.carousel-bullet {
+  color: #fff;
+  cursor: pointer;
+  display: block;
+  font-size: 35px;
+}
+
+/* 현재 페이지 점 말고 다른 페이지 점 클릭시 색상 변함 */
+.carousel-bullet:hover {
+  color: #aaaaaa;
+}
+
+/* 현재 점 페이지 표시  */
+#carousel-1:checked ~ .control-1 ~ .carousel-indicators li:nth-child(1) .carousel-bullet,
+#carousel-2:checked ~ .control-2 ~ .carousel-indicators li:nth-child(2) .carousel-bullet,
+#carousel-3:checked ~ .control-3 ~ .carousel-indicators li:nth-child(3) .carousel-bullet {
+  color: #428bca;
+}
+
+/* css */
+
+/* 슬라이드2번 박스 크기  */
+.carousel1 {
+  position: relative;
+  box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.64);
+  margin-top: 26px;
+}
+
+/* 슬라이드2 박스 */
+.carousel1-open:checked + .carousel1-item {
+  position: static;
+  opacity: 100;
+}
+
+/* 슬라이드2 슬라이드 넘김  */
+.carousel1-item {
+  position: absolute;
+  opacity: 0;
+  -webkit-transition: opacity 0.6s ease-out;
+  transition: opacity 0.6s ease-out;
+}
+
+/* 슬라이드2 화면 넘김 버튼  */
+.carousel1-control {
+  background: rgba(0, 0, 0, 0.28);
+  border-radius: 50%;
+  color: #fff;
+  cursor: pointer;
+  display: none;
+  font-size: 40px;
+  height: 40px;
+  line-height: 35px;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+  cursor: pointer;
+  -ms-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  text-align: center;
+  width: 40px;
+  z-index: 10;
+}
+
+/* 화면 넘김 왼쪽 버튼 */
+.carousel1-control.prev {
+  left: 2%;
+}
+
+/* 화면 넘김 오른쪽 버튼 */
+.carousel1-control.next {
+  right: 2%;
+}
+
+/* 슬라이드2 버튼 클릭 시 검은색으로 색상 변환 */
+.carousel1-control:hover {
+  background: rgba(0, 0, 0, 0.8);
+  color: #aaaaaa;
+}
+
+/* 슬라이드2 화면 넘김 버튼 생성 */
+#carousel1-1:checked ~ .control1-1,
+#carousel1-2:checked ~ .control1-2,
+#carousel1-3:checked ~ .control1-3 {
+  display: block;
+}
+
+/* 슬라이드2 현재 페이지 확인 점 중앙 정렬 */
+.carousel1-indicators {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  bottom: 2%;
+  left: 0;
+  right: 0;
+  text-align: center;
+  z-index: 10;
+}
+
+/* 슬라이드2 현재 페이지 확인 점 선 아래로 내리기 */
+.carousel1-indicators li {
+  display: inline-block;
+  margin: 0 5px;
+}
+
+/* 슬라이드2 현재 페이지 확인 점 정렬 */
+.carousel1-bullet {
+  color: #fff;
+  cursor: pointer;
+  display: block;
+  font-size: 35px;
+}
+
+/* 슬라이드2 현재 확인 점 말고 나머지 점 클릭시 색상 변화 */
+.carousel1-bullet:hover {
+  color: #aaaaaa;
+}
+
+/* 슬라이드2 현재 페이지 확인 점 화면에 따라 변화됨 */
+#carousel1-1:checked ~ .control1-1 ~ .carousel1-indicators li:nth-child(1) .carousel1-bullet,
+#carousel1-2:checked ~ .control1-2 ~ .carousel1-indicators li:nth-child(2) .carousel1-bullet,
+#carousel1-3:checked ~ .control1-3 ~ .carousel1-indicators li:nth-child(3) .carousel1-bullet {
+  color: #428bca;
+}
+
+
+/*버튼 */
+.start{
+  width: 100%;
+  height: 89px;
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+}
+.start_button{
+  border-radius: 10px;
+  border: none;
+  color: white;
+  width: 409px;
+  height: 89px;
+  font-size: 22px;
+  text-align: center;
+  background-color: hwb(320 50% 1%);
+}
+.start_button:active{
+  box-shadow: 3px 3px 0 rgb(0,0,0,0.5);
+  position: relative;
+  top: 2px;
+}
+    </style>
+</head>
+<body>
+  <header> 
+    <nav class="container">
+        <div class="nav_toggle"><i class="bx bx-menu"></i></div>
+        <div class="top_line">🤍엄마🤍</div>
+        <div class="logo">엄마 </div>
+        <div class="nav_menu">
+            <ul class="nav_list">
+                <a class="nav_item" href="../봄/message.html" target='_blank'>편지</a>
+            </ul>
+        </div>
+        <hr class="bottom_line"></hr>
+    </nav>
+<!-- carousel -->
+      <div class="carousel">
+        <div class="carousel-inner">
+            <input class="carousel-open" type="radio" id="carousel-1" name="carousel" aria-hidden="true" hidden="" checked="checked">
+            <div class="carousel-item">
+                <div class="sumlight_page">
+                  <hr class="top_line"/>
+                  <br>
+                  <b>🎬 6/23일 엄마의 생일 🎬</b>
+                  <br>
+                    <center><img src="../엄마생일/이미지/KakaoTalk_20220622_223423197.jpg" class="img"></center>
+                    <p>6월 23일 <br/>
+                      사랑하는 우리 엄마에게  <br>
+                    세상해서 태어나줘서, 나의 엄마가 되어주서 너무 고마워요!! <br>
+                  내 곁에 항상 있어줘서 항상 감사합니다. 언제와 엄마와 함께할 수 있어서 <br>
+                항상 너무 행복했어요!! </p>
+                    <br> 
+                    <hr class="top_line_down"/>
+                    <br>
+                  </div>
+            </div>
+            <input class="carousel-open" type="radio" id="carousel-2" name="carousel" aria-hidden="true" hidden="">
+            <div class="carousel-item">
+              <div class="sumlight_page">
+                <hr class="top_line"/>
+                <br>
+                <b>사랑하는 울 엄마</b>
+                <br>
+                  <center><img src="../엄마생일/이미지/KakaoTalk_20220622_223423197_01.jpg" class="img_p"></center>
+                  <p> 아직은 부족한 실력이지만, 이렇게 내가 직접 만든 걸로 선물 꼭 해 드리고 싶어서<br>
+                  직접 웹사이트 제작해봤어요!! 부족한 실력이지만 열심히 만든거여서 이쁘게 봐주면 좋겠습니당 💗 </p>
+                  <br>  
+                  <hr class="top_line_down"/>
+                  <br>
+                </div>
+            </div>
+            <input class="carousel-open" type="radio" id="carousel-3" name="carousel" aria-hidden="true" hidden="">
+            <div class="carousel-item">
+              <div class="sumlight_page">
+                <hr class="top_line"/>
+                <br>
+                <b>💭🐾</b>
+                <br>
+                  <center><img src="../엄마생일/이미지/KakaoTalk_20220622_223423197_02.jpg" class="img"></center>
+                  <p>
+                    엄마 내가 꼭 성공해서 호강하게 해줄께 !! 사랑해💗💗💗<br>
+                    오늘도 내일도 더 더 사랑해요 ~ 
+                  </p>
+                  <br>  
+                  <hr class="top_line_down"/>
+                  <br>
+                </div>
+            </div>
+            <label for="carousel-3" class="carousel-control prev control-1">‹</label>
+            <label for="carousel-2" class="carousel-control next control-1">›</label>
+            <label for="carousel-1" class="carousel-control prev control-2">‹</label>
+            <label for="carousel-3" class="carousel-control next control-2">›</label>
+            <label for="carousel-2" class="carousel-control prev control-3">‹</label>
+            <label for="carousel-1" class="carousel-control next control-3">›</label>
+            <ol class="carousel-indicators">
+                <li>
+                    <label for="carousel-1" class="carousel-bullet">•</label>
+                </li>
+                <li>
+                    <label for="carousel-2" class="carousel-bullet">•</label>
+                </li>
+                <li>
+                    <label for="carousel-3" class="carousel-bullet">•</label>
+                </li>
+            </ol>
+        </div>
+    </div>
+        <div id="outline2"></div>
+    </div>
+
+        <div class="carousel1">
+          <div class="carousel1-inner">
+              <input class="carousel1-open" type="radio" id="carousel1-1" name="carousel1" aria-hidden="true" hidden="" checked="checked">
+              <div class="carousel1-item">
+                <div class="sumlight_page2">
+                  <hr class="top_line"/>
+                  <br>
+                  <b>예쁜 우리 엄마랑 이쁜 유진 </b>
+                  <br>
+                  <img src="../엄마생일/이미지/KakaoTalk_20220622_223423197_03.jpg" class="styleimg">
+                  <img src="../엄마생일/이미지/KakaoTalk_20220622_223513167.jpg" class="styleimg">
+                  <img src="../엄마생일/이미지/KakaoTalk_20220622_223513167_01.jpg" class="styleimg">  
+                    <p> 우리 집의 중심 우리 엄마 ~ 누구보다도 우리 가족을 먼저 생각해주고 위해주는 엄마 사랑해 🤍<br>
+                    우리 엄마가 되어줘서 너무 고맙고 사랑해요!!  <br>
+                    항상 행복한 날들만 가득찼으면 좋겠어요 !! 💗
+                  </p>
+                      <br> 
+                      <hr class="top_line_down"/>
+                      <br>
+                  </div>
+              </div>
+              <input class="carousel1-open" type="radio" id="carousel1-2" name="carousel1" aria-hidden="true" hidden="">
+              <div class="carousel1-item">
+                <div class="sumlight_page2">
+                  <hr class="top_line"/>
+                  <br><br>
+                  <b> 엄마랑 비행기 타고 학교 간날  </b>
+                  <br>    
+                  <img src="../엄마생일/이미지/KakaoTalk_20220622_223513167_02.jpg" class="styleimg">
+                  <img src="../엄마생일/이미지/KakaoTalk_20220622_223513167_03.jpg" class="styleimg">
+                  <img src="../엄마생일/이미지/KakaoTalk_20220622_223513167_04.jpg" class="styleimg">  
+                    </table>
+                    <p>엄마랑 함께 비행기 타고 학교 올라가서 넘 행복했던 날 ~<br>
+                      이제 2 ~ 3학년이 되면서 엄마랑 보내는 시간들이 점점 줄어들어서 너무 속상했는데 <br>
+                      함께 보낸 시간이 행복했던 날 ❤️‍🔥❤️‍🔥 엄마 사랑해  :)</p>
+                      <br> 
+                      <hr class="top_line_down"/>
+                      <br>
+                  </div>
+              </div>
+              <input class="carousel1-open" type="radio" id="carousel1-3" name="carousel1" aria-hidden="true" hidden="">
+              <div class="carousel1-item">
+                <hr class="top_line_mute"/>
+                <div class="sumlight_page">
+                  <b> ❤️‍🔥 울 이쁜 엄마 ❤️‍🔥 </b>
+                  <br>    
+                  <img src="../엄마생일/이미지/D.jpg" class="styleimg">
+                  <img src="../엄마생일/이미지/D2.jpg" class="styleimg">
+                  <img src="../엄마생일/이미지/D3.jpg" class="styleimg">
+                    <p>
+                      사랑하는 우리 엄마의 생일을 축하드립니다. ~~ <br>
+                      Happy birthday to you <br>
+                      Happy birthday to you <br>
+                      Happy birthday, dear Jesus <br>
+                      Happy birthday to you <br>
+                    </p>
+                      <br>  
+                      <hr class="top_line_down"/>
+                      <br>
+                  </div>
+              </div>
+              <label for="carousel1-3" class="carousel1-control prev control1-1">‹</label>
+              <label for="carousel1-2" class="carousel1-control next control1-1">›</label>
+              <label for="carousel1-1" class="carousel1-control prev control1-2">‹</label>
+              <label for="carousel1-3" class="carousel1-control next control1-2">›</label>
+              <label for="carousel1-2" class="carousel1-control prev control1-3">‹</label>
+              <label for="carousel1-1" class="carousel1-control next control1-3">›</label>
+              <ol class="carousel1-indicators">
+                  <li>
+                      <label for="carousel1-1" class="carousel1-bullet">•</label>
+                  </li>
+                  <li>
+                      <label for="carousel1-2" class="carousel1-bullet">•</label>
+                  </li>
+                  <li>
+                      <label for="carousel1-3" class="carousel1-bullet">•</label>
+                  </li>
+              </ol>
+          </div>
+      </div>
+          <div id="outline2"></div>
+      </div>
+      <br>
+
+      <div class="start">
+        <button class="start_button"><a href="test.html">❤️‍🔥 생일 축하해용 ❤️‍🔥</a></button>
+      </div>
+      <br>
+
+      <!-- FOOTER START -->
+      <div class="footer">
+        <div class="contain">
+        <div class="col">
+          <h1>6/23</h1>
+          <ul>
+            <li> 6 / 23일 </li>
+            <li>사랑하는 우리 엄마의 생일</li>
+            <li>생일축하합니당 💖</li>
+            <li>세상에서 제일 사랑해요</li>
+            <li>💖💖💖💖💖💖💖💖💖</li>
+            <li>🤍🤍🤍🤍🤍🤍🤍🤍🤍</li> 
+          </ul>
+        </div>
+        <div class="col">
+          <h1> 사랑하는 우리 엄마 </h1>
+          <ul>
+            <li> 오늘도 </li>
+            <li> 내일도 </li>
+            <li> 모레도 </li>
+            <li> 너무 사랑해요 </li>
+            <li> 라븅 </li>
+          </ul>
+        </div>
+        <div class="col social">
+          <h1>Social</h1>
+          <ul>
+            <li><i class='bx bxl-instagram'></i></li>
+            <li><i class='bx bxl-facebook' ></i></li>
+            <li><i class='bx bxl-twitter' ></i></li>
+          </ul>
+        </div>
+      <div class="clearfix"></div>
+      </div>
+      </div>
+      <!-- END OF FOOTER -->
+      <script src="js/spring.js" defer></script>
+</body>
+</html>
